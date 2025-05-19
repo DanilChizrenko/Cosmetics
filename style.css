@@ -14,7 +14,7 @@ h1 {
     justify-content: center;
 }
 .product {
-    background: white;
+    background: rgba(255, 0, 0, 0.276);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
