@@ -5,30 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmetics</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-brand">Cosmetics Store</div>
-        <div class="navbar-links">
-            <button id="cart-button">🛒 Корзина</button>
-            <button id="account-button">👤 Личный кабинет</button>
+    <nav>
+        <strong>Cosmetics Store</strong>
+        <div class="nav-actions">
+            <span class="material-icons" title="Корзина">shopping_cart</span>
+            <span class="material-icons" title="Личный кабинет">person</span>
         </div>
     </nav>
 
     <h1>Товары</h1>
     <div id="products"></div>
-
-    <div id="modal" class="modal hidden">
-        <div class="modal-content">
-            <span id="modal-close" class="modal-close">&times;</span>
-            <img id="modal-image" src="" alt="" width="200">
-            <h2 id="modal-name"></h2>
-            <p id="modal-price"></p>
-            <p id="modal-description">Описание товара будет добавлено здесь.</p>
-            <button id="add-to-cart">Добавить в корзину</button>
-        </div>
-    </div>
+    <div id="product-details"></div>
 
     <script src="main.js"></script>
 </body>

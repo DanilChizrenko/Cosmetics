@@ -27,16 +27,8 @@ CREATE TABLE order_items (
 );
 
 INSERT INTO products (name, price, image_url) VALUES
-('Помада', 499.99, 'https://example.com/lipstick.jpg'),
-('Тональный крем', 999.99, 'https://example.com/foundation.jpg');
-
-UPDATE products
-SET image_url = 'https://storage.yandexcloud.net/cdn-prod.viled.kz/v3/original/276879Xt2b0.jpeg'
-WHERE name = 'Помада';
-
-UPDATE products
-SET image_url = 'https://french-house.kz/upload/iblock/71c/6j50gejlkrrof0kabfccseu3de54morv.jpg'
-WHERE name = 'Тональный крем';
+('Помада', 499.99, 'https://storage.yandexcloud.net/cdn-prod.viled.kz/v3/original/276879Xt2b0.jpeg'),
+('Тональный крем', 999.99, 'https://french-house.kz/upload/iblock/71c/6j50gejlkrrof0kabfccseu3de54morv.jpg');
 
 INSERT INTO products (name, price, image_url) VALUES
 ('Тушь для ресниц', 749.99, 'https://cosmart.kz/upload/dev2fun.imagecompress/webp/iblock/bfe/0sxrc0m6yl8rq1nyk3smcn60yhl7jasu.webp'),
