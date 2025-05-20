@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -11,7 +11,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     background-color: #ffcad4;
-    color: #333;
+    color: #000000;
 }
 
 .navbar-brand {
