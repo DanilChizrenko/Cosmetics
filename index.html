@@ -7,9 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-brand">Cosmetics Store</div>
+        <div class="navbar-links">
+            <button id="cart-button">🛒 Корзина</button>
+            <button id="account-button">👤 Личный кабинет</button>
+        </div>
+    </nav>
+
     <h1>Товары</h1>
     <div id="products"></div>
-    
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <img id="modal-image" src="" alt="" width="200">
+            <h2 id="modal-name"></h2>
+            <p id="modal-price"></p>
+            <p id="modal-description">Описание товара будет добавлено здесь.</p>
+            <button id="add-to-cart">Добавить в корзину</button>
+        </div>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>
