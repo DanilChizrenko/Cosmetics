@@ -16,9 +16,14 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgb(255, 120, 120);
+    background-color: #ff7d7d;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 20px;
+}
+
+nav .logo {
+    text-decoration: none;
+    color: black;
 }
 
 nav strong {
@@ -36,6 +41,11 @@ nav strong {
     cursor: pointer;
 }
 
+.nav-actions a span.material-icons,
+.nav-actions span.material-icons {
+    color: black;
+}
+
 #products {
     display: flex;
     flex-wrap: wrap;
@@ -46,26 +56,11 @@ nav strong {
 .product {
     background: white;
     padding: 15px;
-    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 200px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.2s;
-}
-
-.close-btn {
-    float: right;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #888;
-    margin-bottom: 10px;
-}
-
-.close-btn:hover {
-    color: #000;
 }
 
 .product:hover {
@@ -94,3 +89,41 @@ nav strong {
     margin-bottom: 15px;
 }
 
+.close-btn {
+    float: right;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.cart-item {
+    background: white;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: darkred;
+}

@@ -21,14 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
                             <img src="${product.image_url}" alt="${product.name}">
                             <h2>${product.name}</h2>
                             <p>${product.price} ₽</p>
-                            <p>Подробное описание товара: отличный выбор для вашей красоты и ухода.</p>
-                            <button>Добавить в корзину</button>
+                            <p>отличный выбор для вашей красоты и ухода</p>
+                            <button class="add-to-cart">Добавить в корзину</button>
                         </div>
                     `;
 
-                    const closeBtn = document.querySelector('.close-btn');
-                    closeBtn.addEventListener('click', () => {
+                    document.querySelector('.close-btn').addEventListener('click', () => {
                         details.innerHTML = '';
+                    });
+
+                    document.querySelector('.add-to-cart').addEventListener('click', () => {
+                        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                        cart.push(product);
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        alert('Товар добавлен в корзину');
                     });
                 });
 
