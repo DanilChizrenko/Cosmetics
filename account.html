@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Cosmetics Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo"><strong>Cosmetics Store</strong></a>
+        <div class="nav-actions">
+            <a href="cart.html" title="Корзина"><span class="material-icons">shopping_cart</span></a>
+            <a href="account.html" title="Личный кабинет"><span class="material-icons">person</span></a>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Личный кабинет</h1>
+        <div class="account-info">
+            <p><strong>Имя пользователя:</strong> <span id="user-name"></span></p>
+            <p><strong>Email:</strong> <span id="user-email"></span></p>
+            <button id="logout-btn">Выйти</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cosmetics Store. Все права защищены.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = JSON.parse(localStorage.getItem('user'));
+            if (!user) {
+                window.location.href = 'login.html';
+            } else {
+                document.getElementById('user-name').textContent = user.name;
+                document.getElementById('user-email').textContent = user.email;
+            }
+
+            document.getElementById('logout-btn').addEventListener('click', () => {
+                localStorage.removeItem('user');
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+</body>
+
+</html>

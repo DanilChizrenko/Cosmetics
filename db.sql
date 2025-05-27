@@ -34,3 +34,18 @@ INSERT INTO products (name, price, image_url) VALUES
 ('Тушь для ресниц', 749.99, 'https://cosmart.kz/upload/dev2fun.imagecompress/webp/iblock/bfe/0sxrc0m6yl8rq1nyk3smcn60yhl7jasu.webp'),
 ('Пудра компактная', 899.99, 'https://static.markformelle.kz/site/master/catalog/607135/desktop/card/6722163.webp');
 
+ALTER TABLE users ADD COLUMN created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
+INSERT INTO users (name, email, password)
+VALUES (
+    'admin',
+    'admin@example.com	',
+    '$2b$12$KDm74/Rmp8s8N7q0EkU9h.Gk8r7n1X7AXT1XMUogihrnaYl.HGdkO'
+);
+
+ALTER TABLE products ADD COLUMN category VARCHAR(50);
+
+UPDATE products SET category = 'makeup' WHERE id = 1;
+UPDATE products SET category = 'makeup' WHERE id = 3;
+UPDATE products SET category = 'face' WHERE id = 2;
+UPDATE products SET category = 'face' WHERE id = 4;

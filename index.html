@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmetics</title>
+    <title>Cosmetics Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <nav>
         <a href="index.html" class="logo"><strong>Cosmetics Store</strong></a>
         <div class="nav-actions">
             <a href="cart.html" title="Корзина"><span class="material-icons">shopping_cart</span></a>
-            <a href="#" title="Person"><span class="material-icons" title="Личный кабинет">person</span></a>
+            <a href="account.html" title="Личный кабинет"><span class="material-icons">person</span></a>
         </div>
     </nav>
 
-    <h1>Товары</h1>
-    <div id="products"></div>
-    <div id="product-details"></div>
+    <main class="product-layout">
+        <aside class="category-sidebar">
+            <h2>Категории</h2>
+            <ul class="category-list">
+                <li data-category="all" class="active">Все</li>
+                <li data-category="face">Лицо</li>
+                <li data-category="body">Тело</li>
+                <li data-category="hair">Волосы</li>
+                <li data-category="makeup">Макияж</li>
+            </ul>
+        </aside>
+        <section class="product-section">
+            <h1>Товары</h1>
+            <div id="products" class="products-grid"></div>
+            <div id="product-details"></div>
+        </section>
+    </main>
 
+    <footer>
+        <p>&copy; 2025 Cosmetics Store. Все права защищены.</p>
+    </footer>
     <script src="main.js"></script>
 </body>
+
 </html>
