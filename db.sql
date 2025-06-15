@@ -43,9 +43,19 @@ VALUES (
     '$2b$12$KDm74/Rmp8s8N7q0EkU9h.Gk8r7n1X7AXT1XMUogihrnaYl.HGdkO'
 );
 
+INSERT INTO products (name, price, image_url) VALUES
+('Шампунь',	999.99,	'https://i.makeup.kz/d/dc/dcbeopfh4dfg.jpg'),
+('Кондиционер',	658.99,	'https://i.makeup.kz/c/cx/cx6bgyitxyn3.png'),
+('Скраб для тела',	1599.99,'https://theact.kz/image/cache/catalog/gimalai/95838388-600x600.jpg'),
+('Солнце защитный крем',	799.99,	'https://kz.siberianwellness.com/image-proxy?source=https://static.siberianhealth.com/public/projects/shopen/images/42/423886_b630513c.png');
+
 ALTER TABLE products ADD COLUMN category VARCHAR(50);
 
 UPDATE products SET category = 'makeup' WHERE id = 1;
 UPDATE products SET category = 'makeup' WHERE id = 3;
 UPDATE products SET category = 'face' WHERE id = 2;
 UPDATE products SET category = 'face' WHERE id = 4;
+UPDATE products SET category = 'hair' WHERE id = 5;
+UPDATE products SET category = 'hair' WHERE id = 6;
+UPDATE products SET category = 'body' WHERE id = 7;
+UPDATE products SET category = 'body' WHERE id = 8;
